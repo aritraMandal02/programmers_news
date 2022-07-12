@@ -37,78 +37,22 @@
         <div class="jumbotron">
             <h1 class="display-4 font-weight-bold">Programmers' News</h1>
         </div>
-        <div class="border rounded">
-            <h2>How many number of different arrangement can a rubik's cube have?</h2> 
-            <p>It's bigger than you think!</p>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://www.w3schools.com/w3css/img_lights.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
         </div>
         <br>
         <div class="border rounded">
-            <p>Let’s concentrate on the original 3x3x3 Rubik cube.
-
-            The first thing to notice is that if you hold the cube and rotate the faces, the centre squares in each face remain fixed. 
-            <p>[Okay, you can rotate a ‘slice’ but that is equivalent to turning two opposite faces in parallel.]</p>
-
-            <p>There are 8 corner cubelets and 12 edge pieces. Note that they are different: corner cubelets (with three coloured faces) can only go in the corners and edge cubelets (with two coloured faces) can only go in the edges.
-
-            Every cubelet is different so that there can never be any confusion about which piece is where and which way it is oriented; there is no duplication of positions possible, every one is unique.
-
-            The six centres form a reference grid around which the 8 corner pieces and 12 edge pieces move.</p>
-
-            <p>Effectively, what you’re asking is ‘in how many ways can you arrange the 8 corner cubelets and 12 edge cubelets on the frame created by the immovable centres?’
-
-            So we imagine a disassembled cube and try to figure out in how many ways we could assemble it.
-
-            Start with the 8 corner cubelets. We can put the first one in any one of 8 positions. Then there are 7 positions left which we can choose for the second one. After that there are 6 positions for the third one, etc. The total number of ways in which we can arrange the positions of the 8 corners is
-
-            8×7×6×5×4×3×2×1 = 8! = 40,320.</p>
-
-            <p>[The notation 8! is read as ‘eight factorial’ and means the product of the integers from 1 to 8.]</p>
-
-            <p>And we’re not finished there. Each of the 8 corner cubelets, once in position, can be rotated ‘twisted’ in three distinct ways. The total number of ways in which the 8 corners can be twisted is 3×3×3⋯×3 a total of 8 times. This is written as 38 and is equal to 6,561.
-
-            So, each of our 40,320 positions of corners has 6,561 different ‘twists’ of those corners. This means that the total number of corner cubelet arrangements is
-
-            8!×38 = 40,320×6,561 = 264,539,520.</p>
-
-            <p>An identical argument applies for the 12 edge cubelets each of which can be rotated ‘flipped’ in two distinct ways. This leads us to the total number of edge cubelet arrangements which is
-
-            12!×212 = 479,001,600×4,096 = 1,961,990,553,600.</p>
-
-            <p>Now for every one of the 264 million corner arrangements there are 1.9 trillion edge cubelet arrangements! The total number of ways in which we can assemble the cube is therefore
-
-            (8!×38)×(12!×212)
-
-            = (40,320×6,561)×(479,001,600×4,096)
-
-            = 264,539,520×1,961,990,553,600
-
-            = 519,024,039,293,878,272,000</p>
-
-            <p>And there you have it.</p>
-
-            <p>But wait! That’s too many isn’t it? Well, yes it is, sort of. This really is the number of ways you can reassemble a disassembled cube. However, starting from the solved position and by moving the faces in the usual way, we cannot reach all of those arrangements.
-
-            For the corner cubelets it turns out that we can reach all of the 8! positional arrangements but not all of the 38 possible ‘twists’. What happens is that whenever we twist one corner clockwise then we must twist another one anticlockwise by the same amount. So we can twist any seven of the corners as we like but the twists of those seven dictate the twist of the final corner. There is a simple but rather lengthy explanation of why this is so and that’s for another time (see this answer for details). The upshot is that we can only ‘legally’ reach 37 or one third of the total of 38 possible corner twists.
-
-            The same happens for the edge cubelets. We can reach all of the 12! positions but we can only legally reach 211 or one half of the total of 212 possible edge flips. Each time we flip an edge we must also flip another!
-
-            There is one more restriction which has to do with the overall positional arrangements of corner and edge cubelets (ignoring twists and flips). The 8! corner permutations are split into two equally sized groups known as even and odd permutations depending upon how many pairs must be swapped in order to reach the permutation from the solved position. The same is true of the 12! edge permutations, half are even and half are odd. The restriction is that if the corner cubelets are arranged in an even permutation then so must be the edge cubelets and likewise if the corners are in an odd permutation then so must be the edges. We can only reach ‘even-even’ and ‘odd-odd’ positional permutations and cannot reach the ‘even-odd’ and ‘odd-even’ permutations. In other words we can only legally reach one half of the total possible positional arrangements of corners and edges together.
-
-            We must combine the fractions in bold above. We can only legally reach one third of the possible corner twists, one half of the possible edge flips and one half of the positional arrangements.
-
-            Thus, overall we can only legally reach one twelfth of the total possible arrangements.</p>
-
-            <p>&nbsp &nbsp8!×38×12!×212 / 12 <br>
-
-            = 519,024,039,293,878,272,000 / 12 <br>
-
-            = 43,252,003,274,489,856,000</p>
-
-            <p>And that is the number you often see quoted: the number of positions which can be reached ‘legally’ from the solved position.</p>
+            <h2>How many number of different arrangement can a rubik's cube have?</h2> 
+            <p>It's bigger than you think!</p>
+            <a href="rubiks_cube1.html">Learn More</a>
         </div>
+        <br>
     </div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
